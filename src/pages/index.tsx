@@ -1,15 +1,22 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { Button, Container, Navbar } from "@components/index";
+import { Container, Navbar } from "@components/index";
+import { FileForm } from "@components/FileForm";
 
 const Home: NextPage = () => {
   return (
     <main className="overflow-hidden">
       <Navbar />
       <Container>
-        <div>
-          <h1 className="text-6xl text-cyan-400">Test</h1>
+        <div className="grid justify-center mt-20">
+          <h1 className="text-6xl text-primary">QuicPic</h1>
+          <h3 className="text-2xl text-secondary">
+            A fast, easy to use, online picture editor
+          </h3>
         </div>
+
+        <section>
+          <FileForm />
+        </section>
       </Container>
     </main>
   );

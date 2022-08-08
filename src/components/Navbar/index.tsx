@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 
 export function Navbar() {
   return (
@@ -6,37 +6,14 @@ export function Navbar() {
       <div className="w-full flex justify-between items-center">
         <div className="flex items-center">
           <div className="flex mx-2 items-center mr-16">
-            <img></img>
-            <h2 className="text-2xl text-primary-dark font-bold">Boltiny</h2>
+            <img></img> {/* TODO: Add logo later*/}
+            <h2 className="text-2xl text-primary-dark font-bold">QuicPic</h2>
           </div>
           <ul className="flex items-center gap-4">
-            <li className="text-primary font-semibold">Task</li>
+            <li className="text-primary font-semibold">Home</li>
           </ul>
         </div>
-        <SearchBar />
       </div>
     </nav>
-  );
-}
-
-function SearchBar() {
-  const inputRef = useRef<HTMLInputElement>(null!);
-
-  return (
-    <div
-      tabIndex={0}
-      className={`rounded-full border border-primary-light px-8 py-2 ${
-        inputRef.current.id === document.activeElement?.id
-          ? "outline-1 outline-primary-dark"
-          : ""
-      }`}
-    >
-      <input
-        ref={inputRef}
-        className="outline-none"
-        type="text"
-        placeholder="Search Task, project..."
-      />
-    </div>
   );
 }
