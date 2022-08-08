@@ -1,12 +1,23 @@
+import Navbar from "@components/Navbar";
 import type { NextPage } from "next";
 import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <h1 className="text-2xl">Test</h1>
-      <Link href="user">Go to user</Link>
-    </div>
+    <main>
+      <Navbar />
+      <div className="min-h-screen flex flex-col justify-center items-center">
+        <div>
+          <h1 className="text-6xl text-cyan-400">Test</h1>
+
+          <Link href="user">
+            <a className="px-4 py-2 bg-slate-400 text-white cursor-pointer rounded-md">
+              Go to user
+            </a>
+          </Link>
+        </div>
+      </div>
+    </main>
   );
 };
 

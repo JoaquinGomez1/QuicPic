@@ -16,19 +16,25 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "allowUnreachableCode": false,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "components/*": ["./src/components/*"],
-      "hooks/*": ["./src/hooks/*"],
-      "services/*": ["./src/services/*"],
-      "interfaces/*": ["./src/interfaces/*"],
-      "common/*": ["./src/common/*"],
-      "config/*": ["./src/config/*"],
-      "test/*": ["./src/test/*"],
-      "styles/*": ["./src/styles/*"],
-      "utils/*": ["./src/utils/*"]
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@services/*": ["./src/services/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@common/*": ["./src/common/*"],
+      "@config/*": ["./src/config/*"],
+      "@test/*": ["./src/test/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
   "exclude": ["node_modules"]
 }
