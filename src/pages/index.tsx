@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <main className="overflow-hidden">
       <Navbar />
       <Container>
-        <div className="grid justify-center mt-20">
+        <div className="grid justify-center mt-20 mb-8">
           <h1 className="text-6xl text-primary">QuicPic</h1>
           <h3 className="text-2xl text-secondary">
             A fast, easy to use, online picture editor

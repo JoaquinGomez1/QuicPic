@@ -12,11 +12,11 @@ export function FileForm() {
 
   return (
     <form>
-      <div className="flex">
+      <div className="space-y-8">
         <FileEditor onDrop={handleDrop} />
         <FileViewer images={files} />
       </div>
-      <Button disabled={!files}>Upload!</Button>
+      {/* <Button disabled={!files}>Upload!</Button> */}
     </form>
   );
 }

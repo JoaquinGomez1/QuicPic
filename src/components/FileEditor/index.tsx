@@ -26,7 +26,7 @@ export const FileEditor: FC<Props> = ({ onDrop }) => {
     <>
       <div
         {...getRootProps()}
-        className={`border-4 border-dashed ease-in-out border-spacing-8 border-primary-light w-full h-60 p-4 rounded-md grid place-items-center ${
+        className={`border-4 border-dashed ease-in-out border-spacing-8 border-primary-light w-full h-24 p-4 rounded-md grid place-items-center ${
           isDragActive ? "text-secondary cursor-grabbing border-secondary" : ""
         }`}
       >

@@ -6,9 +6,14 @@ interface Props {
 }
 export const FileViewer: FC<Props> = ({ images }) => {
   return (
-    <div>
+    <div className="">
+      <p>
+        {(!images?.length || images.length <= 0) &&
+          "You'll see a preview of your image here once you upload something"}
+      </p>
       {images?.map((image) => (
         <img
+          className="object-contain w-full h-96"
           src={image.preview}
           alt="The image that an awesome user just uploaded to our website!"
         ></img>
