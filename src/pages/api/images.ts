@@ -8,7 +8,7 @@ const s3Bucket = new aws.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY || "",
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
   },
-
+  apiVersion: "v4",
   region: s3BucketLocation,
 });
 
@@ -18,7 +18,7 @@ const s3Bucket = new aws.S3({
  *  so that an insecure app (i.e frontend) can use it to upload to s3 directly
  */
 async function genUploadUrl() {
-  const fileName = `${Math.random()}${Math.random()}`; // We use random twice to ensure that the name will be unique
+  const fileName = `${Math.random()}`.split(".")[1];
 
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
