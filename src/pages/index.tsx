@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <div className="grid justify-center mt-20 mb-8">
           <h1 className="text-6xl text-primary">QuicPic</h1>
           <h3 className="text-2xl text-secondary">
-            A fast, easy to use, online picture editor
+            A fast, simple and easy to use image uploader
           </h3>
         </div>
 
