@@ -13,6 +13,7 @@ export const FileViewer: FC<Props> = ({ images }) => {
       </p>
       {images?.map((image) => (
         <img
+          data-test-id="preview-image"
           className="object-contain w-full h-96"
           src={image.preview}
           alt="The image that an awesome user just uploaded to our website!"
