@@ -15,16 +15,15 @@ export const Button: FC<PropsWithChildren<Props>> = ({
   disabled,
   ...rest
 }) => {
-  console.log({ disabled });
-  const disabledClassName = disabled ? " bg-slate-300 cursor-not-allowed" : "";
+  const disabledClassName = disabled
+    ? " bg-slate-300 cursor-not-allowed"
+    : " bg-slate-400 cursor-pointer";
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={
-        "px-4 py-2 bg-slate-400 text-white cursor-pointer rounded-md " +
-        className +
-        disabledClassName
+        "px-4 py-2 text-white rounded-md " + className + disabledClassName
       }
       {...rest}
     >
